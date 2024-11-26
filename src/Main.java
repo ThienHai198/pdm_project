@@ -103,33 +103,119 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Create a new window for Trains
-                JFrame trainsFrame = new JFrame("Stations Information");
-                trainsFrame.setSize(800, 600);
-                trainsFrame.setBackground(Color.decode("#45C4B0"));
-                trainsFrame.setLocationRelativeTo(null);
-                trainsFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                JFrame stationsFrame = new JFrame("Stations Information");
+                stationsFrame.setSize(800, 600);
+                stationsFrame.setBackground(Color.decode("#45C4B0"));
+                stationsFrame.setLocationRelativeTo(null);
+                stationsFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
                 // Data for the JTable (dummy data)
-                String[][] trainData = {
-                        {"101", "Express Train"},
-                        {"102", "Local Train"},
-                        {"103", "Freight Train"},
-                        {"104", "Passenger Train"},
-                        {"105", "Metro"}
+                String[][] stationData = {
+
                 };
 
                 // Column names
-                String[] columnNames = {"Train ID", "Train Name"};
+                String[] columnNames = {"Station ID", "Station Name"};
 
                 // Create JTable
-                JTable trainTable = new JTable(trainData, columnNames);
+                JTable stationTable = new JTable(stationData, columnNames);
 
                 // Add table to a JScrollPane for scrolling
-                JScrollPane tableScrollPane = new JScrollPane(trainTable);
+                JScrollPane tableScrollPane = new JScrollPane(stationTable);
 
                 // Add the table to the frame
-                trainsFrame.add(tableScrollPane, BorderLayout.CENTER);
-                trainsFrame.setVisible(true);
+                stationsFrame.add(tableScrollPane, BorderLayout.CENTER);
+                stationsFrame.setVisible(true);
+            }
+        });
+
+        Track.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Create a new window for Trains
+                JFrame trackFrame = new JFrame("Track Information");
+                trackFrame.setSize(800, 600);
+                trackFrame.setBackground(Color.decode("#45C4B0"));
+                trackFrame.setLocationRelativeTo(null);
+                trackFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+                // Data for the JTable (dummy data)
+                String[][] trackData = {
+
+                };
+
+                // Column names
+                String[] columnNames = {"Track ID", "Start Station ID","End Station ID"};
+
+                // Create JTable
+                JTable trackTable = new JTable(trackData, columnNames);
+
+                // Add table to a JScrollPane for scrolling
+                JScrollPane tableScrollPane = new JScrollPane(trackTable);
+
+                // Add the table to the frame
+                trackFrame.add(tableScrollPane, BorderLayout.CENTER);
+                trackFrame.setVisible(true);
+            }
+        });
+
+        SequenceStation.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Create a new window for Trains
+                JFrame sequenceStationFrame = new JFrame("Sequence Station Information");
+                sequenceStationFrame.setSize(800, 600);
+                sequenceStationFrame.setBackground(Color.decode("#45C4B0"));
+                sequenceStationFrame.setLocationRelativeTo(null);
+                sequenceStationFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+                // Data for the JTable (dummy data)
+                String[][] SequenceStationData = {
+
+                };
+
+                // Column names
+                String[] columnNames = {"Sequence number","Route ID", "Schedule ID","Station ID", "Arrival Time","Departure Time"};
+
+                // Create JTable
+                JTable sequenceStationTable = new JTable(SequenceStationData, columnNames);
+
+                // Add table to a JScrollPane for scrolling
+                JScrollPane tableScrollPane = new JScrollPane(sequenceStationTable);
+
+                // Add the table to the frame
+                sequenceStationFrame.add(tableScrollPane, BorderLayout.CENTER);
+                sequenceStationFrame.setVisible(true);
+            }
+        });
+
+        Schedules.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Create a new window for Trains
+                JFrame schedulesFrame = new JFrame("Stations Information");
+                schedulesFrame.setSize(800, 600);
+                schedulesFrame.setBackground(Color.decode("#45C4B0"));
+                schedulesFrame.setLocationRelativeTo(null);
+                schedulesFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+                // Data for the JTable (dummy data)
+                String[][] schedulesData = {
+
+                };
+
+                // Column names
+                String[] columnNames = {"Schedule ID", "Train ID","Start Station ID","End Station ID","Arrival Time","Departure Time"};
+
+                // Create JTable
+                JTable schedulesTable = new JTable(schedulesData, columnNames);
+
+                // Add table to a JScrollPane for scrolling
+                JScrollPane tableScrollPane = new JScrollPane(schedulesTable);
+
+                // Add the table to the frame
+                schedulesFrame.add(tableScrollPane, BorderLayout.CENTER);
+                schedulesFrame.setVisible(true);
             }
         });
 
